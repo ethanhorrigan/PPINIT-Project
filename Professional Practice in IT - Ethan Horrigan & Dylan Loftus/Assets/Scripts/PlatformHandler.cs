@@ -7,7 +7,7 @@ public class PlatformHandler : MonoBehaviour
 
     public GameObject player;
     public GameObject platform;
-    BoxCollider2D coll;
+    PolygonCollider2D coll;
     public string platformId;
 
     // Start is called before the first frame update
@@ -34,14 +34,14 @@ public class PlatformHandler : MonoBehaviour
         if (collision.gameObject.tag == "Player1" && platformId == "Player2")
         {
            Debug.Log("PLAYER 1 COLLIDED");
-            platform.GetComponent<BoxCollider2D>().enabled = false;
+            platform.GetComponent<PolygonCollider2D>().enabled = false;
             Debug.Log("REEEEEE");
         }
 
         if (collision.gameObject.tag == "Player2" && platformId == "Player1")
         {
             Debug.Log("PLAYER 2 COLLIDED");
-            platform.GetComponent<BoxCollider2D>().enabled = false;
+            platform.GetComponent<PolygonCollider2D>().enabled = false;
         }
 
 
