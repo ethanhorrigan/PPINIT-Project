@@ -7,6 +7,7 @@ public class PlatformHandler : MonoBehaviour
 
     public GameObject player;
     public GameObject platform;
+    public GameObject key;
     PolygonCollider2D coll;
     public string platformId;
 
@@ -46,4 +47,5 @@ public class PlatformHandler : MonoBehaviour
 
 
     }
+
 }
