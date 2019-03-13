@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     float jumpSpeed = 800f;
     bool isGrounded = true;
     Rigidbody2D rb;
+    public float rotationZ;
     public string playerId;
 
 
@@ -42,11 +43,12 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 transform.position += Vector3.left * movementSpeed * Time.deltaTime;
+                transform.Rotate(0, 0, rotationZ);
             }
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 transform.position += Vector3.right * movementSpeed * Time.deltaTime;
-
+                transform.Rotate(0, 0, -rotationZ);
             }
 
             if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -64,11 +66,12 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.A))
             {
                 transform.position += Vector3.left * movementSpeed * Time.deltaTime;
+                transform.Rotate(0, 0, rotationZ);
             }
             if (Input.GetKey(KeyCode.D))
             {
                 transform.position += Vector3.right * movementSpeed * Time.deltaTime;
-
+                transform.Rotate(0, 0, -rotationZ);
             }
 
             if (Input.GetKeyDown(KeyCode.W))
