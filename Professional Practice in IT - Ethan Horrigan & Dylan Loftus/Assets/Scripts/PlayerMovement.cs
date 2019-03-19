@@ -11,8 +11,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     public float rotationZ;
     public string playerId;
-
-
+    public string keyID;
 
     void Start()
     {
@@ -30,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     {
         return playerId;
     }
+
 
     void Update()
     {
@@ -85,16 +85,22 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.DownArrow))
+        {
+            if (!isGrounded)
             {
-                if (!isGrounded)
-                {
-                    rb.gravityScale += 2;
-                }
+                rb.gravityScale += 2;
             }
+            
         }
+
+        
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
         isGrounded = true;
+
+        
     }
+
 }
