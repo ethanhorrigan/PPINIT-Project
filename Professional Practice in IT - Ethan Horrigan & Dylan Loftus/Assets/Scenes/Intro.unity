@@ -705,10 +705,10 @@ MonoBehaviour:
   - {fileID: 1986793448}
   - {fileID: 1832204185}
   smoothTime: 0.5
-  minZoom: 170
-  maxZoom: 140
-  zoomLimit: 20
-  offset: {x: 0, y: 0, z: -3.67}
+  minZoom: 165
+  maxZoom: 135
+  zoomLimit: 30
+  offset: {x: 0, y: 0, z: -3.74}
 --- !u!1 &189727045
 GameObject:
   m_ObjectHideFlags: 0
