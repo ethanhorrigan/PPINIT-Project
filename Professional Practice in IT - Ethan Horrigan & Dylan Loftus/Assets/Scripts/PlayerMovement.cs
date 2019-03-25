@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
     public float rotationZ;
     public string playerId;
-    public string keyID;
+
+    public Transform spawnPoint;
 
     void Start()
     {
@@ -92,15 +93,22 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
-
         
+        if(transform.position.y <= -40){
+            Destroy(player);
+            RespawnPlayer(player);
+        }
+    
     }
+
+    void RespawnPlayer(GameObject p){
+        Instantiate(p, spawnPoint.position, spawnPoint.rotation);
+    }
+
 
     void OnCollisionEnter2D(Collision2D col)
     {
         isGrounded = true;
-
-        
     }
 
 }

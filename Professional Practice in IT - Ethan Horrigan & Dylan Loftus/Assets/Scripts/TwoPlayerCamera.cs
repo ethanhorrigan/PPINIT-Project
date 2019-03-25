@@ -25,8 +25,11 @@ public class TwoPlayerCamera : MonoBehaviour
 
     void LateUpdate(){
 
-        if(players.Count == 0)
+
+
+        if(players.Count == 0){
             return;
+        }
 
         MoveCam();
         ZoomCam();
