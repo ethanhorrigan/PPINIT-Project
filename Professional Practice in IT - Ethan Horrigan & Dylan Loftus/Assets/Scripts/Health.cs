@@ -14,11 +14,17 @@ public class Health : MonoBehaviour
     public Sprite emptyKey;
 
 
+    public static int health;
+    public int healthLeft;
+
+    public Image[] hearts;
+    public Sprite fullHeart;
+    public Sprite emptyHeart;
+
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("test");
         for (int i = 0; i < keys.Length; i++)
         {
             if(i < keysCollected)
@@ -37,6 +43,8 @@ public class Health : MonoBehaviour
             {
                 keys[i].enabled = false;
             }
-        } 
+        }
+
+
     }
 }
