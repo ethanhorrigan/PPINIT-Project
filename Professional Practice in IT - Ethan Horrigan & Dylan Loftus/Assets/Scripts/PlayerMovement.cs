@@ -103,6 +103,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     void RespawnPlayer(GameObject p){
+        Health.health--;
         Instantiate(p, spawnPoint.position, spawnPoint.rotation);
 
     }
