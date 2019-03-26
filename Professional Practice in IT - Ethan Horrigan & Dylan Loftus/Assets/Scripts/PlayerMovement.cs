@@ -95,14 +95,16 @@ public class PlayerMovement : MonoBehaviour
         }
         
         if(transform.position.y <= -40){
-            Destroy(player);
+            //Destroy(player);
             RespawnPlayer(player);
+            Destroy(player);
         }
     
     }
 
     void RespawnPlayer(GameObject p){
         Instantiate(p, spawnPoint.position, spawnPoint.rotation);
+
     }
 
 

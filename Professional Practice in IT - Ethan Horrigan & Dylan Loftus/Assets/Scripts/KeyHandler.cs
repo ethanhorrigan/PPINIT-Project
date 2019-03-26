@@ -10,6 +10,7 @@ public class KeyHandler : MonoBehaviour
            if (node.gameObject.tag == "PickUp")
            {
                node.gameObject.SetActive(false);
+            Health.keysCollected++;
            }
        }
 }
