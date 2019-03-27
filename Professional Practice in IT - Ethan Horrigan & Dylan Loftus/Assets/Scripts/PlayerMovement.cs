@@ -13,9 +13,11 @@ public class PlayerMovement : MonoBehaviour
     public string playerId;
 
     public Transform spawnPoint;
+    private Vector3 spawn;
 
     void Start()
     {
+        spawn = transform.position;
         SetPlayerId(playerId);
         Debug.Log(playerId);
         rb = GetComponent<Rigidbody2D>();
@@ -94,20 +96,13 @@ public class PlayerMovement : MonoBehaviour
             
         }
         
-        if(transform.position.y <= -40){
-            //Destroy(player);
-            RespawnPlayer(player);
-            Destroy(player);
+        if(transform.position.y <= -40){;
+            transform.position = spawn;
+            Health.health--;
         }
     
     }
-
-    void RespawnPlayer(GameObject p){
-        Health.health--;
-        Instantiate(p, spawnPoint.position, spawnPoint.rotation);
-
-    }
-
+    
 
     void OnCollisionEnter2D(Collision2D col)
     {
