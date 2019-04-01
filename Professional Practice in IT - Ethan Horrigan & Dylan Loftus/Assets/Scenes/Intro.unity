@@ -866,10 +866,10 @@ MonoBehaviour:
   - {fileID: 1986793448}
   - {fileID: 1832204185}
   smoothTime: 0.5
-  minZoom: 165
+  minZoom: 150
   maxZoom: 135
   zoomLimit: 30
-  offset: {x: 0, y: 0, z: -3.74}
+  offset: {x: 0, y: 0, z: -6.73}
 --- !u!1 &189727045
 GameObject:
   m_ObjectHideFlags: 0
