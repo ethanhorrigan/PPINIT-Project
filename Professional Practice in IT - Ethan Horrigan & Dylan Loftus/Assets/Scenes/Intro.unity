@@ -1456,6 +1456,7 @@ GameObject:
   - component: {fileID: 290296925}
   - component: {fileID: 290296924}
   - component: {fileID: 290296926}
+  - component: {fileID: 290296927}
   m_Layer: 0
   m_Name: key (4)
   m_TagString: PickUp
@@ -1542,7 +1543,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 2.53}
+    oldSize: {x: 4.41, y: 5.85}
     newSize: {x: 6, y: 2.53}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1626,6 +1627,25 @@ PolygonCollider2D:
       - {x: -1.9699999, y: -0.024999999}
       - {x: -2.09, y: -0.235}
       - {x: -2.34, y: -0.275}
+--- !u!95 &290296927
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290296923}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a74515b4e299ea42bb692ce8cade9c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &303366624
 GameObject:
   m_ObjectHideFlags: 0
@@ -3712,7 +3732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &629457216
 Transform:
   m_ObjectHideFlags: 0
@@ -3759,6 +3779,7 @@ GameObject:
   - component: {fileID: 658542664}
   - component: {fileID: 658542663}
   - component: {fileID: 658542665}
+  - component: {fileID: 658542666}
   m_Layer: 0
   m_Name: key (2)
   m_TagString: PickUp
@@ -3845,7 +3866,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 2.53}
+    oldSize: {x: 4.41, y: 5.85}
     newSize: {x: 6, y: 2.53}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3929,6 +3950,25 @@ PolygonCollider2D:
       - {x: -1.9699999, y: -0.024999999}
       - {x: -2.09, y: -0.235}
       - {x: -2.34, y: -0.275}
+--- !u!95 &658542666
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658542662}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a74515b4e299ea42bb692ce8cade9c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &707344499
 GameObject:
   m_ObjectHideFlags: 0
@@ -4121,6 +4161,7 @@ GameObject:
   - component: {fileID: 753479895}
   - component: {fileID: 753479894}
   - component: {fileID: 753479896}
+  - component: {fileID: 753479897}
   m_Layer: 0
   m_Name: key (1)
   m_TagString: PickUp
@@ -4207,7 +4248,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 2.53}
+    oldSize: {x: 4.41, y: 5.85}
     newSize: {x: 6, y: 2.53}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -4291,6 +4332,25 @@ PolygonCollider2D:
       - {x: -1.9699999, y: -0.024999999}
       - {x: -2.09, y: -0.235}
       - {x: -2.34, y: -0.275}
+--- !u!95 &753479897
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753479893}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a74515b4e299ea42bb692ce8cade9c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &813452997
 GameObject:
   m_ObjectHideFlags: 0
@@ -5766,6 +5826,7 @@ GameObject:
   - component: {fileID: 965148276}
   - component: {fileID: 965148275}
   - component: {fileID: 965148277}
+  - component: {fileID: 965148278}
   m_Layer: 0
   m_Name: key (3)
   m_TagString: PickUp
@@ -5852,7 +5913,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6, y: 2.53}
+    oldSize: {x: 4.41, y: 5.85}
     newSize: {x: 6, y: 2.53}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -5936,6 +5997,25 @@ PolygonCollider2D:
       - {x: -1.9699999, y: -0.024999999}
       - {x: -2.09, y: -0.235}
       - {x: -2.34, y: -0.275}
+--- !u!95 &965148278
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965148274}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3a74515b4e299ea42bb692ce8cade9c2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &982348461
 GameObject:
   m_ObjectHideFlags: 0

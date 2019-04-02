@@ -44,6 +44,10 @@ public class PlatformHandler : MonoBehaviour
             platform.GetComponent<PolygonCollider2D>().enabled = false;
         }
 
+        if(PlayerMovement.isGrounded == true)
+        {
+            platform.GetComponent<PolygonCollider2D>().enabled = true;
+        }
 
     }
 
