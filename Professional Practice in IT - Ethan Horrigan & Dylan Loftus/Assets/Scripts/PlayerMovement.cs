@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform spawnPoint;
     private Vector3 spawn;
+    private Vector3 spawn2 = new Vector3(74.19f,-9.23f);
+    private Vector3 spawn3 = new Vector3(130f,-9.23f);
 
     void Start()
     {
@@ -96,8 +98,16 @@ public class PlayerMovement : MonoBehaviour
             
         }
         
-        if(transform.position.y <= -40){;
-            transform.position = spawn;
+        if(transform.position.y <= -40){
+            if(transform.position.x < 70){
+                transform.position = spawn;
+            }
+            else if(transform.position.x < 120 && transform.position.x > 70){
+                transform.position = spawn2;
+            }
+            else{
+                transform.position = spawn3;
+            }
             Health.health--;
         }
     
