@@ -17,12 +17,18 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 spawn2 = new Vector3(74.19f,-9.23f);
     private Vector3 spawn3 = new Vector3(130f,-9.23f);
 
+    public AudioClip eJump;    // Add your Audi Clip Here;
+
+
     void Start()
     {
         spawn = transform.position;
         SetPlayerId(playerId);
         Debug.Log(playerId);
         rb = GetComponent<Rigidbody2D>();
+
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = eJump;
     }
 
     public void SetPlayerId(string id)
@@ -62,6 +68,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     rb.AddForce(Vector3.up * jumpSpeed);
                     isGrounded = false;
+                    GetComponent<AudioSource>().Play();
                 }
             }
         }
@@ -85,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     rb.AddForce(Vector3.up * jumpSpeed);
                     isGrounded = false;
+                    GetComponent<AudioSource>().Play();
                 }
             }
         }
