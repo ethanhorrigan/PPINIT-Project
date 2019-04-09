@@ -7,6 +7,7 @@ public class PlatformHandler : MonoBehaviour
 
     public GameObject player;
     public GameObject platform;
+    public GameObject ground;
     PolygonCollider2D coll;
     public string platformId;
 
@@ -20,7 +21,10 @@ public class PlatformHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(player.transform.position.x == 17.00063)
+        {
+
+        }
     }
 
     void SetPlayer(GameObject p)
@@ -35,7 +39,6 @@ public class PlatformHandler : MonoBehaviour
         {
            Debug.Log("PLAYER 1 COLLIDED");
             platform.GetComponent<BoxCollider2D>().enabled = false;
-            Debug.Log("REEEEEE");
         }
 
         if (collision.gameObject.tag == "Player2" && platformId == "Player1")
@@ -44,10 +47,13 @@ public class PlatformHandler : MonoBehaviour
             platform.GetComponent<BoxCollider2D>().enabled = false;
         }
 
-        if(PlayerMovement.isGrounded == true)
+        if (collision.gameObject.tag == "gTag1")
         {
+            Debug.Log("ttttD");
             platform.GetComponent<BoxCollider2D>().enabled = true;
         }
+
+
 
     }
 
