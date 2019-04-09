@@ -34,19 +34,19 @@ public class PlatformHandler : MonoBehaviour
         if (collision.gameObject.tag == "Player1" && platformId == "Player2")
         {
            Debug.Log("PLAYER 1 COLLIDED");
-            platform.GetComponent<PolygonCollider2D>().enabled = false;
+            platform.GetComponent<BoxCollider2D>().enabled = false;
             Debug.Log("REEEEEE");
         }
 
         if (collision.gameObject.tag == "Player2" && platformId == "Player1")
         {
             Debug.Log("PLAYER 2 COLLIDED");
-            platform.GetComponent<PolygonCollider2D>().enabled = false;
+            platform.GetComponent<BoxCollider2D>().enabled = false;
         }
 
         if(PlayerMovement.isGrounded == true)
         {
-            platform.GetComponent<PolygonCollider2D>().enabled = true;
+            platform.GetComponent<BoxCollider2D>().enabled = true;
         }
 
     }
