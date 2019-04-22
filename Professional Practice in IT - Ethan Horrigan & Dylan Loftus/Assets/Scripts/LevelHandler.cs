@@ -2,22 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class LevelHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 
-    public GameObject highlight;
+    public Image highlight;
+
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+
         Debug.Log("MouseEnter");
-        highlight.GetComponent<SpriteRenderer>().enabled = true;
+        highlight.enabled = true;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         Debug.Log("MouseExit");
-        highlight.GetComponent<SpriteRenderer>().enabled = false;
+        highlight.enabled = false;
     }
 
     // Start is called before the first frame update
