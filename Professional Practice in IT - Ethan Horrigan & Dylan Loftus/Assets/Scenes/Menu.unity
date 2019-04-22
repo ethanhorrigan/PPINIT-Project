@@ -450,8 +450,8 @@ GameObject:
   - component: {fileID: 1778219460}
   - component: {fileID: 1778219459}
   - component: {fileID: 1778219458}
-  - component: {fileID: 1778219462}
   - component: {fileID: 1778219461}
+  - component: {fileID: 1778219462}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -468,7 +468,7 @@ RectTransform:
   m_GameObject: {fileID: 1778219456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.70292825, y: 0.70292825, z: 0.70292825}
   m_Children: []
   m_Father: {fileID: 777101547}
   m_RootOrder: 0
@@ -517,7 +517,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1778219459}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1778219459
@@ -557,23 +568,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1778219456}
   m_CullTransparentMesh: 0
---- !u!111 &1778219461
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1778219456}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: fd5f5221226d5b549b01219acd58a7ee, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: fd5f5221226d5b549b01219acd58a7ee, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
---- !u!95 &1778219462
+--- !u!95 &1778219461
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -583,7 +578,7 @@ Animator:
   m_GameObject: {fileID: 1778219456}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3592b629426022245b70a947e0c945aa, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -592,3 +587,16 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1778219462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1778219456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb90f1428cfa3fa45aab4e12ffe01780, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayButton: {fileID: 1778219458}
