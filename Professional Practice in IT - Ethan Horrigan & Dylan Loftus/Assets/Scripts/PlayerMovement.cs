@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     rb.AddForce(Vector3.up * jumpSpeed);
                     isGrounded = false;
-                    AudioClip.PlayOneShot(eJump);
+                    //AudioClip.PlayOneShot(eJump);
                 }
             }
         }
