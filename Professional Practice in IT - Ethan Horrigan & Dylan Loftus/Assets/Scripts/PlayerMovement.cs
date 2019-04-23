@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,14 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 spawn2 = new Vector3(74.19f,-9.23f);
     private Vector3 spawn3 = new Vector3(130f,-9.23f);
 
-    private AudioSource jumps;
-    public AudioClip eJump; //set this in ispector with audiofile
-    public AudioClip hJump; //set this in ispector with audiofile       
-    public AudioClip collect; //set this in ispector with audiofile       
-    public AudioClip death; //set this in ispector with audiofile     
-
-    bool deathBool = false;
-    bool jumpBool = false;
+    public AudioClip eJump;    // Add your Audi Clip Here;
 
 
     void Start()
@@ -34,8 +28,8 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(playerId);
         rb = GetComponent<Rigidbody2D>();
 
-        jumps = GetComponent<AudioSource>();
-
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = eJump;
     }
 
     public void SetPlayerId(string id)
@@ -51,9 +45,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
-        
-
         if (isGrounded)
         {
             rb.gravityScale = 2.1f;
@@ -72,19 +63,14 @@ public class PlayerMovement : MonoBehaviour
                 transform.Rotate(0, 0, -rotationZ);
             }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow) && jumpBool == false)
+            if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                jumpBool = true;
                 if (isGrounded)
                 {
                     rb.AddForce(Vector3.up * jumpSpeed);
                     isGrounded = false;
-
-                    jumps.clip = eJump ;
-                    jumps.Play();
-                    
+                    //AudioClip.PlayOneShot(eJump);
                 }
-                jumpBool = false;
             }
         }
 
@@ -101,18 +87,14 @@ public class PlayerMovement : MonoBehaviour
                 transform.Rotate(0, 0, -rotationZ);
             }
 
-            if (Input.GetKeyDown(KeyCode.W) && jumpBool == false)
+            if (Input.GetKeyDown(KeyCode.W))
             {
-                jumpBool = true;
                 if (isGrounded)
                 {
                     rb.AddForce(Vector3.up * jumpSpeed);
                     isGrounded = false;
-                    jumps.clip = hJump;
-                    jumps.Play();
-
+                    GetComponent<AudioSource>().Play();
                 }
-                jumpBool = false;
             }
         }
 
@@ -124,13 +106,8 @@ public class PlayerMovement : MonoBehaviour
             }
             
         }
-        if (deathBool == false && transform.position.y <= -30)
-        {
-            deathBool = true;
-            jumps.clip = death;
-            jumps.Play();
-        }
-        if (transform.position.y <= -40){
+        
+        if(transform.position.y <= -40){
             if(transform.position.x < 70){
                 transform.position = spawn;
             }
@@ -141,17 +118,18 @@ public class PlayerMovement : MonoBehaviour
                 transform.position = spawn3;
             }
             Health.health--;
-            deathBool = false;
         }
-        
 
+        if(Health.health == 0){
+            SceneManager.LoadScene("DeathScene");
+        }
+    
     }
     
 
     void OnCollisionEnter2D(Collision2D col)
     {
         isGrounded = true;
-        jumps.clip = collect;
     }
 
 }
