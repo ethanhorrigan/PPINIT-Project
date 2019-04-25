@@ -9,6 +9,9 @@ public class LevelHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 {
 
     public Image highlight;
+    public Button LevelButton;
+    public int LevelID;
+    private string LevelSelection;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -26,7 +29,8 @@ public class LevelHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     // Start is called before the first frame update
     void Start()
     {
-        
+        LevelSelection = "Level_"+LevelID+"";
+        LevelButton.onClick.AddListener(TaskOnClick);
     }
 
     // Update is called once per frame
@@ -35,4 +39,9 @@ public class LevelHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
         
         
     }
+
+    void TaskOnClick() {
+            SceneManager.LoadScene(LevelSelection);
+        }
+    
 }
