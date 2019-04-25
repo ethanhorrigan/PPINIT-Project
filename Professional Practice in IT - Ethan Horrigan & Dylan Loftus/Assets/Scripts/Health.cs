@@ -23,6 +23,10 @@ public class Health : MonoBehaviour
     public Sprite emptyHeart;
 
 
+    void Start() {
+        health = 3;
+        keysCollected = 0;
+    }
     // Update is called once per frame
     void Update()
     {
