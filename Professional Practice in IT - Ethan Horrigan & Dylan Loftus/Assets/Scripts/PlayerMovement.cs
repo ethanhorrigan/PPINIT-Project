@@ -15,8 +15,10 @@ public class PlayerMovement : MonoBehaviour
 
     public Transform spawnPoint;
     private Vector3 spawn;
-    private Vector3 spawn2 = new Vector3(74.19f,-9.23f);
-    private Vector3 spawn3 = new Vector3(213f,-10f);
+    public int spawn2Margin;
+    public Vector3 spawn2;
+    public int spawn3Margin;
+    public Vector3 spawn3;
 
     public AudioClip eJump;    // Add your Audi Clip Here;
 
@@ -108,10 +110,10 @@ public class PlayerMovement : MonoBehaviour
         }
         
         if(transform.position.y <= -40){
-            if(transform.position.x < 70){
+            if(transform.position.x < spawn2Margin){
                 transform.position = spawn;
             }
-            else if(transform.position.x < 120 && transform.position.x > 70){
+            else if(transform.position.x < spawn3Margin && transform.position.x > spawn2Margin){
                 transform.position = spawn2;
             }
             else{
