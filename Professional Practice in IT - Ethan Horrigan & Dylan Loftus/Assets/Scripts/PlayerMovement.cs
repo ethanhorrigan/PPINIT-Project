@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform spawnPoint;
     private Vector3 spawn;
     private Vector3 spawn2 = new Vector3(74.19f,-9.23f);
-    private Vector3 spawn3 = new Vector3(130f,-9.23f);
+    private Vector3 spawn3 = new Vector3(213f,-10f);
 
     public AudioClip eJump;    // Add your Audi Clip Here;
 
