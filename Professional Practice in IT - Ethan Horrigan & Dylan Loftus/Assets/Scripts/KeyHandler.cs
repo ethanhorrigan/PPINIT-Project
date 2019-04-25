@@ -18,6 +18,7 @@ public class KeyHandler : MonoBehaviour
         {
             node.gameObject.SetActive(false);
             Health.keysCollected++;
+            Debug.Log(Health.keysCollected);
             GetComponent<AudioSource>().Play();
         }
     }

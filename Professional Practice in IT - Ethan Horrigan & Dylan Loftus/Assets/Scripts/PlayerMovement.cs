@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public GameObject player;
     public float movementSpeed = 3f;
-    float jumpSpeed = 900f;
+    float jumpSpeed = 1000f;
     public static bool isGrounded = true;
     Rigidbody2D rb;
     public float rotationZ;
