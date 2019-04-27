@@ -8,7 +8,10 @@ public class PlayerMovement : MonoBehaviour
     public GameObject player;
     public float movementSpeed = 3f;
     float jumpSpeed = 1000f;
-    public static bool isGrounded = true;
+    public static bool eGrounded = true;
+    public static bool hGrounded = true;
+    bool eJumping = false;
+    bool hJumping = false;
     Rigidbody2D rb;
     public float rotationZ;
     public string playerId;
@@ -19,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 spawn2;
     public int spawn3Margin;
     public Vector3 spawn3;
+    public int eVelocity;
+    public int hVelocity;
 
     public AudioClip eJump;    // Add your Audi Clip Here;
 
@@ -47,7 +52,23 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (isGrounded)
+        if(eVelocity == 0)
+        {
+            eJumping = false;
+            eGrounded = true;
+        }
+
+        if (hVelocity == 0)
+        {
+            hJumping = false;
+            hGrounded = true;
+        }
+
+        if (eGrounded)
+        {
+            rb.gravityScale = 2.1f;
+        }
+        if (hGrounded)
         {
             rb.gravityScale = 2.1f;
         }
@@ -65,15 +86,22 @@ public class PlayerMovement : MonoBehaviour
                 transform.Rotate(0, 0, -rotationZ);
             }
 
-            if (Input.GetKeyDown(KeyCode.UpArrow))
+            if (Input.GetKeyDown(KeyCode.UpArrow) && eVelocity == 0)
             {
-                if (isGrounded)
+                if (eGrounded)
                 {
                     rb.AddForce(Vector3.up * jumpSpeed);
-                    isGrounded = false;
-                    //AudioClip.PlayOneShot(eJump);
+                    eGrounded = false;
+                    eJumping = true;
+                    Debug.Log("Vector3.up: "+Vector3.up+"");
                 }
             }
+
+            if (eJumping == true)
+            {
+                eVelocity++;
+            }
+
         }
 
         if (playerId == "Player2")
@@ -89,25 +117,24 @@ public class PlayerMovement : MonoBehaviour
                 transform.Rotate(0, 0, -rotationZ);
             }
 
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W) && hVelocity == 0)
             {
-                if (isGrounded)
+                if (hGrounded)
                 {
                     rb.AddForce(Vector3.up * jumpSpeed);
-                    isGrounded = false;
+                    hGrounded = false;
+                    hVelocity++;
                     GetComponent<AudioSource>().Play();
                 }
             }
+
+            if (hJumping == true)
+            {
+                hVelocity++;
+            }
         }
 
-        if (Input.GetKey(KeyCode.DownArrow))
-        {
-            if (!isGrounded)
-            {
-                rb.gravityScale += 2;
-            }
-            
-        }
+
         
         if(transform.position.y <= -40){
             if(transform.position.x < spawn2Margin){
@@ -127,11 +154,12 @@ public class PlayerMovement : MonoBehaviour
         }
     
     }
-    
 
-    void OnCollisionEnter2D(Collision2D col)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        isGrounded = true;
+        eVelocity = 0;
+        hVelocity = 0;
     }
+
 
 }

@@ -30,6 +30,7 @@ public class PortalHandler : MonoBehaviour
             {
                 SceneManager.LoadScene("LevelSelector");
             }
+
             else
             {
                 must3keys.GetComponent<SpriteRenderer>().enabled = true;
