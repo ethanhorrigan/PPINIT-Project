@@ -27,7 +27,7 @@ Eugene & Hubert is a 2D Platformer developed in Unity with the main focus on wor
 * [Unity](https://unity.com/)
 * [Photoshop](https://www.adobe.com/ie/products/photoshop.html)
 * [Ableton](https://www.ableton.com/en/)
-* [C#] (https://docs.microsoft.com/en-us/dotnet/csharp/)
+* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 
 
 ## Art & Sound Design (Ethan Horrigan)
