@@ -45,7 +45,7 @@ Eugene & Hubert is a 2D Platformer developed in Unity with the main focus on wor
 * [Platform Effector](https://docs.unity3d.com/Manual/class-PlatformEffector2D.html)
 * [Sound Samples](https://freesound.org/)
 * [Audio in Unity](https://docs.unity3d.com/Manual/Audio.html)
-* [OnCollisionEnter2D] (https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter2D.html)
+* [OnCollisionEnter2D](https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter2D.html)
 
 ## Authors
 

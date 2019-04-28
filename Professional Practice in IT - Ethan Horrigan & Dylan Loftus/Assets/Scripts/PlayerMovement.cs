@@ -25,7 +25,6 @@ public class PlayerMovement : MonoBehaviour
     public int eVelocity;
     public int hVelocity;
 
-    public AudioClip eJump;    // Add your Audi Clip Here;
 
 
     void Start()
@@ -35,8 +34,6 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(playerId);
         rb = GetComponent<Rigidbody2D>();
 
-        GetComponent<AudioSource>().playOnAwake = false;
-        GetComponent<AudioSource>().clip = eJump;
     }
 
     public void SetPlayerId(string id)
@@ -124,7 +121,6 @@ public class PlayerMovement : MonoBehaviour
                     rb.AddForce(Vector3.up * jumpSpeed);
                     hGrounded = false;
                     hVelocity++;
-                    GetComponent<AudioSource>().Play();
                 }
             }
 
